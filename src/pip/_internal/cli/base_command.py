@@ -148,12 +148,6 @@ class Command(object):
             message = (
                 "A future version of pip will drop support for Python 2.7."
             )
-            if platform.python_implementation() == "CPython":
-                message = (
-                    "Python 2.7 will reach the end of its life on January "
-                    "1st, 2020. Please upgrade your Python as Python 2.7 "
-                    "won't be maintained after that date. "
-                ) + message
             deprecated(message, replacement=None, gone_in=None)
 
         # TODO: Try to get these passing down from the command?
